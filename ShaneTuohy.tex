@@ -1,0 +1,170 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Shane}{Tuohy}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+% \address{Galway}{Ireland}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+353(86)~3147148}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\phone[mobile]{+27(81)~5342566}    
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{me@shane.so}                               % optional, remove / comment the line if not wanted
+\homepage{shane.so}                         % optional, remove / comment the line if not wanted
+\social[linkedin]{shanetuohy}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{picture.eps}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Programmer }                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2010--2014 (projected)}{PhD}{National University of Ireland, Galway}{}{}{My PhD work is concerned with the specific demands of using Ethernet technology to network the numerous digital cameras and associated back end vision and scene analysis sub-systems that will be deployed in the next generation of vehicles.}  % arguments 3 to 6 can be left empty
+\cventry{2012--2013}{Visiting Researcher}{University of California San Diego}{}{}{I spent 7 months working with Professor Mohan Trivedi at LISA (Laboratory for Intelligent and Safe Automobiles), working on real world implementations of automotive Ethernet networks.}
+\cventry{2006--2010}{B.E Electronic \& Computer Engineering}{National University of Ireland, Galway}{\textit{First Class Honours}}{}{My final year research project involved developing a novel automotive distance determination algorithm using OpenCV. This won the 2010 Avaya Award for Best Final Year Project and a research paper based on it was published at a peer reviewed conference.}
+
+
+\nocite{*}
+\bibliographystyle{ieeetr}
+\bibliography{pub2}                        % 'publications' is the name of a BibTeX file
+
+%\section{Master thesis}
+%\cvitem{title}{\emph{Title}}
+%\cvitem{supervisors}{Supervisors}
+%\cvitem{description}{Short thesis abstract}
+
+\section{Experience}
+%\subsection{Vocational}
+\cventry{2014}{Web Developer}{Level Four Research and Consultancy Limited}{Galway, Ireland}{}{I have been working on a contract basis on PHP web applications. 
+\begin{itemize}%
+\item MySQL and PHP development of new features in an MVC architecture
+\item Integration with commercial SMS APIs and designing automated email notifications
+\end{itemize}}
+
+\cventry{2009}{Research and Development Engineer}{Netfort Technologies}{Galway, Ireland}{}{I spent 6 months working on all aspects of the LANGuardian project, an enterprise network monitoring tool.\newline{}%
+%
+While working at Netfort, I;
+\begin{itemize}%
+\item Incorporated several new features into LANGuardian such as;
+  \begin{itemize}%
+  \item BitTorrent monitoring
+  \item Improved boot procedures
+  \item Extended hardware support
+  \end{itemize}
+\item Regularly assisted the support team to help answer customer questions.
+\item Worked on a small, dynamic engineering team in a variety of languages
+\end{itemize}}
+\cventry{2008}{Programming Technician}{ESB}{Lanesborough, Ireland}{}{I spent 3 months working primarily with Microsoft Office products to develop reporting tools as well as a live updating digital noticeboard.}
+%\subsection{Miscellaneous}
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+
+
+\section{Skills}
+\cvlistitem{Programming in a wide variety of languages, from assembly to web applications}
+\cvlistitem{Linux server administration experience}
+\cvlistitem{Electronic Engineering background, including analogue, digital and FPGA design}
+\cvlistitem{Excellent interpersonal, public speaking and written communication skills}
+
+
+\section{Programming Skills}
+\cvdoubleitem{\textbf{High Level}}{Python, Java, C++, PHP, C\#}{\textbf{Low Level}}{ASM, C, FORTRAN, VHDL}
+\cvdoubleitem{\textbf{Linux Admin}}{LAMP, LDAP, Exim, KVM}{\textbf{Scripting}}{bash, Perl, tcl}
+\cvdoubleitem{\textbf{Frameworks}}{ns-3, OpenCV, Android, flask}{\textbf{Tools}}{EC2, git, CVS}
+
+\section{Languages}
+\cvitemwithcomment{English}{Native}{}
+\cvitemwithcomment{Irish}{Fluent}{}
+\cvitemwithcomment{French}{Intermediate}{}
+
+%\section{Interests}
+%\cvitem{hobby 1}{Description}
+%\cvitem{hobby 2}{Description}
+%\cvitem{hobby 3}{Description}
+
+\section{Achievements and Awards}
+\cvlistitem{2010 Avaya Prize for Best Final Year Project}
+\cvlistitem{Awarded Irish Research Council EMBARK EPS Scholarship}
+\cvlistitem{Represented NUI Galway at varsity level in squash}
+\cvlistitem{Produced, researched and presented multiple FM radio shows}
+\cvlistitem{President of NUI Galway Computer Society for 2 years}
+\cvlistitem{Founding member of NUIG Skeptic Society}
+
+
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the sinlplpgle column list before, this item is particularly long to wrap over several lines.}
+
+\section{References}
+\begin{cvcolumns}
+  \cvcolumn{}{\begin{itemize}
+  \item Mark McDonagh - HP Cloud Services (Formerly of Netfort Technologies)
+  \item Dr. Martin Glavin - National University of Ireland Galway
+  \item Liam Kilmartin - National University of Ireland Galway
+  \end{itemize}
+\emph{Contact details available on request}}
+  
+  %\cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+  %\cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
